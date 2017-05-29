@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root_pull_to_refresh_ll"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="#F3F3F3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="23dip" >
+
+        <LinearLayout
+            android:id="@+id/ll_pull_to_refresh_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/pull_to_refresh_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/pull_to_refresh_pull_label"
+                android:textColor="#777777"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/pull_to_refresh_updated_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/pull_to_refresh_updated"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_pull_to_refresh"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginRight="22dip"
+            android:layout_marginTop="5dip"
+            android:layout_toLeftOf="@+id/ll_pull_to_refresh_text"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@anim/ic_loading"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_pull_to_refresh"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="5dip"
+            android:layout_toLeftOf="@+id/ll_pull_to_refresh_text"
+            android:gravity="center"
+            android:src="@drawable/ic_pull_to_refresh_down" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dip" />
+
+</LinearLayout>

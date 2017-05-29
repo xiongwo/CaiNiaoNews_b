@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.liuyuhua.cainiaonews.widget.DragLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_main_left_bg">
+
+    <include layout="@layout/view_main_left_layout"/>
+
+    <com.example.liuyuhua.cainiaonews.widget.CustomRelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/top_bar_main"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/main_info_fragment"
+                    class="com.example.liuyuhua.cainiaonews.fragment.MainInfoFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.example.liuyuhua.cainiaonews.widget.CustomRelativeLayout>
+
+</com.example.liuyuhua.cainiaonews.widget.DragLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/top_bar_common"/>
+
+    <include layout="@layout/layout_split_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="问题类型"
+            android:textSize="18sp"
+            android:textColor="@color/color_black"/>
+
+        <LinearLayout
+            android:id="@+id/ll_activity_suggest_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_activity_suggest_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新需求建议"
+                android:textSize="14sp"
+                android:textColor="@color/color_head_title"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/arrow_down"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_split_line"/>
+
+    <EditText
+        android:id="@+id/et_activity_suggest_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="left|top"
+        android:hint="请输入您的宝贵建议和问题（必填）"
+        android:minLines="8"
+        android:textSize="14sp"
+        android:background="@null"/>
+
+    <include layout="@layout/layout_split_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="联系方式："
+            android:textSize="15sp"
+            android:textColor="@color/color_black"/>
+
+        <EditText
+            android:id="@+id/et_activity_suggest_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:hint="必填"
+            android:textSize="14sp"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_split_line"/>
+
+    <Button
+        android:id="@+id/btn_activity_suggest_commit"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="提交"
+        android:textSize="18sp"
+        android:textColor="@color/color_white"
+        android:background="@color/mask_tags_8"/>
+
+</LinearLayout>

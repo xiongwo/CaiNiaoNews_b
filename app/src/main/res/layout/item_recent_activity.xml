@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/cv_item_recent_activity"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="1dp"
+          android:layout_marginBottom="1dp"
+          android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp"
+          app:cardCornerRadius="1dp"
+          app:cardBackgroundColor="@color/color_white"
+          app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_item_recent_activity_head"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/default_img"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_item_recent_activity_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="创投探索之旅·上海站——股权投资:中产阶层最好的上升通道"
+            android:textSize="16sp"
+            android:textColor="@color/color_tab_title"
+            android:maxLines="2"/>
+
+        <!--地点-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_local"/>
+
+            <TextView
+                android:id="@+id/tv_item_recent_activity_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="北京"
+                android:textColor="@color/color_head_title"/>
+
+        </LinearLayout>
+
+        <!--活动状态和举行时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_item_recent_activity_status"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:text="报名中"
+                android:textColor="@color/color_white"
+                android:background="@drawable/ic_recent_activity_doing"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_item_recent_activity_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="4月10日 - 5月13日"
+                android:textColor="@color/color_head_title"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

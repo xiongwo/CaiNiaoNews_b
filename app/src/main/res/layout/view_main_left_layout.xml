@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="30dp"
+    android:paddingLeft="30dp"
+    android:paddingTop="50dp">
+
+    <LinearLayout
+        android:id="@+id/left_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/left_image_view"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/icon_avatar"/>
+
+        <!--这里的gravity是多余的？还是真机运行时会有偏差？-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--这里的center_vertical是多余的？因为是垂直的线性布局？还是真机运行时会有偏差？-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="mingzi"
+                android:textColor="#ffffff"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="ssss"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/left_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/left_linear_layout"
+        android:layout_above="@+id/left_text_view"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:cacheColorHint="#00000000"
+        android:listSelector="@null"
+        android:divider="@null"
+        android:scrollbars="none"/>
+
+    <TextView
+        android:id="@+id/left_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="a1yong3bai@163.com"
+        android:textColor="#ffffff"
+        android:textSize="15sp"/>
+
+</RelativeLayout>

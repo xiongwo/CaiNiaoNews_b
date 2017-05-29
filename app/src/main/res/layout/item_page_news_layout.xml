@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="125dp"
+              android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_page_cover"
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:layout_weight="1"
+        android:src="@drawable/beauty"
+        android:scaleType="centerInside"/>
+    
+    <RelativeLayout
+        android:id="@+id/relative_layout_page_one"
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:layout_weight="2"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="谷歌做了一个AI画图新工具，能让“寥寥几笔”瞬间变成精美简笔画! |潮科技"
+            android:textSize="14sp"
+            android:textColor="@color/color_black"
+            android:maxLines="3"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_page_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_page_title"
+            android:text="完全是拯救不会画画的人的神器！"
+            android:textSize="12sp"
+            android:textColor="@color/color_head_title"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_page_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/tv_page_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="梁风"
+                android:textSize="12sp"
+                android:textColor="@color/color_head_title"/>
+
+            <TextView
+                android:id="@+id/tv_page_post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_page_author"
+                android:layout_marginLeft="5dp"
+                android:text="26分钟前"
+                android:textSize="12sp"
+                android:textColor="@color/color_head_title"/>
+
+            <TextView
+                android:id="@+id/tv_page_extraction_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_page_extraction_two"
+                android:layout_marginRight="5dp"
+                android:text="大公司"
+                android:textSize="12sp"
+                android:textColor="@color/color_head_title"/>
+
+            <TextView
+                android:id="@+id/tv_page_extraction_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="人工智能"
+                android:textSize="12sp"
+                android:textColor="@color/color_head_title"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    
+</LinearLayout>

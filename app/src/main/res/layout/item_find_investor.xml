@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/iv_item_find_investor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/beauty"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_item_find_investor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_item_find_investor"
+        android:layout_marginLeft="5dp"
+        android:text="王强"
+        android:textSize="18sp"
+        android:textColor="@color/color_black"/>
+
+    <TextView
+        android:id="@+id/tv_item_find_investor_org"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/iv_item_find_investor"
+        android:layout_below="@+id/tv_item_find_investor_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="真格基金"
+        android:textSize="16sp"
+        android:textColor="@color/color_tab_title"/>
+
+    <View
+        android:id="@+id/v_item_find_investor_split"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/tv_item_find_investor_org"
+        android:layout_below="@+id/tv_item_find_investor_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/color_tab_title"/>
+
+    <TextView
+        android:id="@+id/tv_item_find_investor_position"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/v_item_find_investor_split"
+        android:layout_below="@+id/tv_item_find_investor_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="联合创始人"
+        android:textSize="16sp"
+        android:textColor="@color/color_tab_title"/>
+
+    <TextView
+        android:id="@+id/tv_item_find_investor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_item_find_investor"
+        android:layout_alignBottom="@+id/iv_item_find_investor"
+        android:layout_marginLeft="5dp"
+        android:text="关注领域："
+        android:textSize="16sp"
+        android:textColor="@color/color_tab_title"/>
+
+    <TextView
+        android:id="@+id/tv_item_find_investor_industry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_item_find_investor_text"
+        android:layout_alignBottom="@+id/iv_item_find_investor"
+        android:text="教育"
+        android:textSize="16sp"
+        android:textColor="@color/color_tab_title"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+</RelativeLayout>

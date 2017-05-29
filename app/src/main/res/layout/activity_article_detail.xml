@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--顶部导航栏-->
+    <include layout="@layout/top_bar_article_detail"/>
+
+    <!--中间内容-->
+    <RelativeLayout
+        android:id="@+id/rl_article_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--底部工具栏-->
+        <RelativeLayout
+            android:id="@+id/rl_article_detail_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mask_tags_6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="底部工具栏"
+                android:textColor="@color/color_white"/>
+
+        </RelativeLayout>
+
+        <!--中间可滚动的内容-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_article_detail_bottom_bar">
+
+            <ScrollView
+                android:id="@+id/sv_article_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <!--文章标题-->
+                    <TextView
+                        android:id="@+id/tv_article_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="20sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <!--作者头像-->
+                        <com.example.liuyuhua.cainiaonews.widget.RoundImageView
+                            android:id="@+id/iv_article_detail_avatar"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            app:roundWidth="13dp"
+                            app:roundHeight="13dp"
+                            android:scaleType="centerInside"/>
+
+                        <!--作者名字-->
+                        <TextView
+                            android:id="@+id/tv_article_detail_author"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/color_tab_title"/>
+
+                        <!--发布时间-->
+                        <TextView
+                            android:id="@+id/tv_article_detail_post_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/color_tab_title"/>
+
+                    </LinearLayout>
+
+                    <!--封面图片-->
+                    <ImageView
+                        android:id="@+id/iv_article_detail_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"/>
+
+                    <!--文章内容-->
+                    <WebView
+                        android:id="@+id/wv_article_detail_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <include layout="@layout/layout_load_status"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

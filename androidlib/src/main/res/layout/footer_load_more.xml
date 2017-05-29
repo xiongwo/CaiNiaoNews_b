@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_load_more_ll"
+    android:layout_width="fill_parent"
+    android:layout_height="35dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/pg_load_more"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_centerVertical="true"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:indeterminate="false" />
+
+        <TextView
+            android:id="@+id/tv_load_more"
+            android:text="上拉加载更多"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dip"
+            android:layout_toRightOf="@id/pg_load_more"
+            android:clickable="true"
+            android:textColor="@color/progress_tv_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>
