@@ -8,7 +8,7 @@
 <div>
   <img src="https://github.com/xiongwo/CaiNiaoNews_b/blob/master/%E5%88%97%E8%A1%A8%E9%A1%B5.png" width="40%" height="40%"/>
 </div>
-<div float="right">
+<div style="float:right">
   <img src="https://github.com/xiongwo/CaiNiaoNews_b/blob/master/%E8%AF%A6%E6%83%85%E9%A1%B5.png" width="40%" height="40%"/>
 </div>
 
