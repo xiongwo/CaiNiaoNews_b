@@ -38,7 +38,6 @@ public class MainActivity extends BaseActivity implements DefineView{
     private DragLayout mDragLayout;
     private ImageView mMainIcon;
     private ImageView mLeftIcon;
-    private TextView mMainText;
     private ListView mLeftListView;
     private UpdateBroadcastReceiver mUpdateBroadcastReceiver;
     private IntentFilter mIntentFilter;
