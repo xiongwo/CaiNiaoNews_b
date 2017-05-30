@@ -1,6 +1,7 @@
 package com.example.androidlib.utils;
 
 import android.content.Context;
+import android.util.Log;
 
 /**
  * 判断该接口的磁盘缓存是否已经过期
@@ -21,6 +22,7 @@ public class InterfaceDiskCache {
     public static boolean isCacheOutOfDate(Context context, String sharedName, String jsonTimeKey, int cacheTime) {
         SharedPreferencesHelper helper= SharedPreferencesHelper.getInstance(context, sharedName);
         long lastWriteTime = helper.getLongValue(jsonTimeKey);
+        Log.d("isCacheOutOfDate", "lastWriteTime: " + lastWriteTime);
         if (lastWriteTime == 0) {
             // 说明没有缓存
             return false;

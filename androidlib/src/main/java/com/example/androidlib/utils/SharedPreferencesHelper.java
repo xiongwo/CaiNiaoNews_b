@@ -84,6 +84,9 @@ public class SharedPreferencesHelper {
 
     public SharedPreferencesHelper remove(String key) {
         if (key != null) {
+            if (mEditor == null) {
+                mEditor = mSharedPreferences.edit();
+            }
             mEditor.remove(key);
         }
         return sPreferencesHelper;
