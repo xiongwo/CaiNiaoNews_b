@@ -271,7 +271,7 @@ public class PageFragment extends BaseFragment implements DefineView{
                 Log.d(TAG, "文本数据已经过期");
 
                 // 清除过期数据
-                helper.remove(key).apply();
+                helper.remove(key).remove(key + "/time").apply();
 
                 // 请求服务器
                 if (!requestServer(helper, key)) {
