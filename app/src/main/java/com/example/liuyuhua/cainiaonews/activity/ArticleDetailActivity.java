@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.util.LruCache;
 import android.view.View;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -153,16 +154,37 @@ public class ArticleDetailActivity extends BaseActivity implements DefineView{
         mWebSettings.setAppCacheEnabled(true);
         mWebSettings.setBlockNetworkImage(true);
 
+        // 设置自适应后，文字太小；最好的情况，还应该让图片match_parent
+        mWebSettings.setUseWideViewPort(true);
+        mWebSettings.setLoadWithOverviewMode(true);
+        // 目前的解决方法是，让文字放大，最好是根据屏幕的dpi进行放大
+        mWebSettings.setTextZoom(300);
+
         mContentWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 view.getSettings().setBlockNetworkImage(false); // 神奇！为什么能行？
             }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
         });
 
 //        mWebSettings.setUseWideViewPort(true);
 //        mWebSettings.setLoadWithOverviewMode(true);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mContentWebView.canGoBack()) {
+            mContentWebView.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 
     /**
